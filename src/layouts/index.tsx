@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter } from 'react-router-dom'
+import { HashRouter , Switch, Route } from 'react-router-dom'
 import AppSidebar from './side-bar'
 
 import styled from 'styled-components'
@@ -41,21 +41,21 @@ export default class Layout extends React.Component {
     visible: false
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     document.addEventListener('keydown', this.disableVisibility, false)
   }
 
-  toggleVisibility = () => {
+  toggleVisibility: () => void = () => {
     this.setState({ visible: !this.state.visible })
   }
 
-  disableVisibility = () => {
+  disableVisibility: () => void = () => {
     if (this.state.visible === true) {
       this.setState({ visible: false })
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <AppWrapper>
         <AppHeader onToggle={this.toggleVisibility} onClick={this.disableVisibility} />
@@ -65,7 +65,7 @@ export default class Layout extends React.Component {
         >
           <meta name="description" content="Eric Wang's Personal Homepage" />
         </Helmet>
-        <BrowserRouter basename="/resume">
+        <HashRouter basename="/resume">
           <AppSidebar {...this.state} onToggle={this.toggleVisibility} />
           <AppPushAble onClick={this.disableVisibility}>
             <Sidebar.Pusher>
@@ -81,7 +81,7 @@ export default class Layout extends React.Component {
               </AppContainer>
             </Sidebar.Pusher>
           </AppPushAble>
-        </BrowserRouter>
+        </HashRouter >
         <AppFooter onClick={this.disableVisibility} />
       </AppWrapper>
     )
