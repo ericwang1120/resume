@@ -1,7 +1,6 @@
-import React from 'react'
+import styled from 'styled-components'
 
-function H3(props: any) {
-  return <h3 {...props} />
-}
-
+const H3 = styled.h3`
+  font-size: 1.2em;
+`
 export default H3

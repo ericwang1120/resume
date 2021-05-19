@@ -8,7 +8,7 @@ import React from 'react'
 
 import H1 from '@/components/H1'
 
-export default function NotFound() {
+export default function NotFound(): JSX.Element {
   return (
     <article>
       <H1>Page Not Found</H1>

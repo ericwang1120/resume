@@ -7,10 +7,13 @@
 import React from 'react'
 import { Sidebar, Menu, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
-function AppSidebar(props: any) {
-  // eslint-disable-line react/prefer-stateless-function
+interface Props {
+  visible: boolean
+  onToggle: () => void
+}
+
+function AppSidebar(props: Props): JSX.Element {
   return (
     <Sidebar
       as={Menu}
@@ -31,11 +34,6 @@ function AppSidebar(props: any) {
       </Menu.Item>
     </Sidebar>
   )
-}
-
-AppSidebar.propTypes = {
-  visible: PropTypes.bool,
-  onToggle: PropTypes.func
 }
 
 export default AppSidebar

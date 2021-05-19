@@ -1,14 +1,14 @@
 import React from 'react'
-import { HashRouter , Switch, Route } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AppSidebar from './side-bar'
 
 import styled from 'styled-components'
 import { Container, Sidebar } from 'semantic-ui-react'
-import Home from '@/pages/home'
-import NotFound from '@/pages/not-found'
 import Header from './header'
 import { Helmet } from 'react-helmet'
 import Footer from './footer'
+import { renderRoutes } from 'react-router-config'
+import routes from '@/routes'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -65,23 +65,14 @@ export default class Layout extends React.Component {
         >
           <meta name="description" content="Eric Wang's Personal Homepage" />
         </Helmet>
-        <HashRouter basename="/resume">
+        <HashRouter>
           <AppSidebar {...this.state} onToggle={this.toggleVisibility} />
           <AppPushAble onClick={this.disableVisibility}>
             <Sidebar.Pusher>
-              <AppContainer>
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/resume" component={Home} />
-                  <Route path="/home" component={Home} />
-                  {/* <Route path="/resume" component={ResumePage} /> */}
-                  {/* <Route path="/events" component={EventPage} /> */}
-                  <Route path="" component={NotFound} />
-                </Switch>
-              </AppContainer>
+              <AppContainer>{renderRoutes(routes)}</AppContainer>
             </Sidebar.Pusher>
           </AppPushAble>
-        </HashRouter >
+        </HashRouter>
         <AppFooter onClick={this.disableVisibility} />
       </AppWrapper>
     )

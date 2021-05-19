@@ -33,7 +33,7 @@ interface IProps {
 }
 
 class Header extends React.PureComponent<IProps> {
-  render() {
+  render(): JSX.Element {
     return (
       <HeaderMenu size="large" onClick={this.props.onClick}>
         <Container fluid>

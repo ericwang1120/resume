@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu, Container } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 
-import styled, { StyledComponent } from 'styled-components'
+import styled from 'styled-components'
 
 const A = styled.a`
   color: #41addd;
@@ -20,7 +20,11 @@ const FooterMenu = styled(Menu)`
   }
 `
 
-function Footer(props: any) {
+interface Props {
+  onClick: () => void
+}
+
+function Footer(props: Props): JSX.Element {
   return (
     <FooterMenu size="large" onClick={props.onClick}>
       <Container fluid>
