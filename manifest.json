@@ -1,0 +1,34 @@
+{
+  "index.html": {
+    "file": "assets/index.1f556171.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_vendor.85d4e858.js"
+    ],
+    "css": [
+      "assets/index.1b1885d2.css"
+    ],
+    "assets": [
+      "assets/flags.94d5c7f1.png",
+      "assets/icons.8b4e1b84.eot",
+      "assets/icons.434466b5.woff2",
+      "assets/icons.95b6a484.woff",
+      "assets/icons.cb7f81f5.ttf",
+      "assets/icons.282a64fb.svg",
+      "assets/outline-icons.4537fa06.eot",
+      "assets/outline-icons.4d288344.woff2",
+      "assets/outline-icons.4bc359c2.woff",
+      "assets/outline-icons.67172172.ttf",
+      "assets/outline-icons.ae8fd02a.svg",
+      "assets/brand-icons.d023c55f.eot",
+      "assets/brand-icons.e7d4d534.woff2",
+      "assets/brand-icons.9fafd6c3.woff",
+      "assets/brand-icons.42e369dc.ttf",
+      "assets/brand-icons.6519a15b.svg"
+    ]
+  },
+  "_vendor.85d4e858.js": {
+    "file": "assets/vendor.85d4e858.js"
+  }
+}
