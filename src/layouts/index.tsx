@@ -1,7 +1,6 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom'
 import AppSidebar from './side-bar'
-
 import styled from 'styled-components'
 import { Container, Sidebar } from 'semantic-ui-react'
 import Header from './header'

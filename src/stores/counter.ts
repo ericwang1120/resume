@@ -2,23 +2,16 @@ import { observable } from 'mobx'
 
 export interface CounterStore {
   counter: number
-  increment: () => void
-  decrement: () => void
-  incrementAsync: () => void
+  fetchData(): void
 }
 
 const counterStore: CounterStore = observable({
   counter: 0,
-  increment() {
-    this.counter++
-  },
-  decrement() {
-    this.counter--
-  },
-  incrementAsync() {
-    setTimeout(() => {
-      this.counter++
-    }, 1000)
+  fetchData() {
+    fetch('https://s2j8aqxdve.execute-api.ap-southeast-2.amazonaws.com/Prod/update')
+      .then((response) => response.json())
+      .then((data) => (this.counter = data.Attributes.current_counter))
+      .catch(() => (this.counter = 0))
   }
 })
 

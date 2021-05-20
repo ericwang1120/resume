@@ -7,8 +7,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import H3 from '@/components/H3'
-
 import { Menu, Container, Icon } from 'semantic-ui-react'
+import counterStore from '@/stores/counter'
+import { observer } from 'mobx-react'
 
 const B = styled.b`
   align-self: flex-end;
@@ -33,6 +34,9 @@ interface IProps {
 }
 
 class Header extends React.PureComponent<IProps> {
+  componentDidMount(): void {
+    counterStore.fetchData()
+  }
   render(): JSX.Element {
     return (
       <HeaderMenu size="large" onClick={this.props.onClick}>
@@ -48,10 +52,16 @@ class Header extends React.PureComponent<IProps> {
             <Icon size="large" name="mail outline" />
             <B>Mail To Me</B>
           </Menu.Item>
+          <Menu.Item>
+            <B>
+              Total visited:
+              {' ' + counterStore.counter}
+            </B>
+          </Menu.Item>
         </Container>
       </HeaderMenu>
     )
   }
 }
 
-export default Header
+export default observer(Header)

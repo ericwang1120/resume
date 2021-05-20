@@ -21,5 +21,8 @@ export default defineConfig({
     }
   },
   plugins: [reactRefresh()],
-  base: '/resume/'
+  base: '/resume/',
+  build: {
+    manifest: true
+  }
 })
