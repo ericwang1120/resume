@@ -53,10 +53,10 @@ class Header extends React.PureComponent<IProps> {
             <B>Mail To Me</B>
           </Menu.Item>
           <Menu.Item>
-            <B>
+            <b>
               Total visited:
               {' ' + counterStore.counter}
-            </B>
+            </b>
           </Menu.Item>
         </Container>
       </HeaderMenu>
