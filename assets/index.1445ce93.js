@@ -12,7 +12,7 @@ var e=Object.defineProperty,t=Object.defineProperties,n=Object.getOwnPropertyDes
   @media (max-width: 768px) {
     display: none !important;
   }
-`;class j extends o.PureComponent{componentDidMount(){C.fetchData()}render(){return o.createElement(T,{size:"large",onClick:this.props.onClick},o.createElement(E,{fluid:!0},o.createElement(s.Item,{as:"a",onClick:this.props.onToggle},o.createElement(u,{size:"large",name:"list layout"}),o.createElement(P,null,"Menu")),o.createElement(D,null,o.createElement(k,null,"Eric Wang's Personal Homepage")),o.createElement(s.Item,{as:"a",href:"mailto:eric.kiwi@outlook.com"},o.createElement(u,{size:"large",name:"mail outline"}),o.createElement(P,null,"Mail To Me")),o.createElement(s.Item,null,o.createElement(P,null,"Total visited:"," "+C.counter))))}}var O=g(j);const R=p.a`
+`;class j extends o.PureComponent{componentDidMount(){C.fetchData()}render(){return o.createElement(T,{size:"large",onClick:this.props.onClick},o.createElement(E,{fluid:!0},o.createElement(s.Item,{as:"a",onClick:this.props.onToggle},o.createElement(u,{size:"large",name:"list layout"}),o.createElement(P,null,"Menu")),o.createElement(D,null,o.createElement(k,null,"Eric Wang's Personal Homepage")),o.createElement(s.Item,{as:"a",href:"mailto:eric.kiwi@outlook.com"},o.createElement(u,{size:"large",name:"mail outline"}),o.createElement(P,null,"Mail To Me")),o.createElement(s.Item,null,o.createElement("b",null,"Total visited:"," "+C.counter))))}}var O=g(j);const R=p.a`
   color: #41addd;
 
   &:hover {
